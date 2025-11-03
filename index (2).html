@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laporan Harian Hasil Trading — Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="sheet">
+    <header>
+      <h1>LAPORAN HARIAN HASIL TRADING</h1>
+      <div class="meta">
+        <div>
+          <label>Bot Token</label>
+          <input id="botToken" placeholder="BOT_TOKEN (isi jika mau simpan sementara)">
+        </div>
+        <div>
+          <label>Chat ID</label>
+          <input id="chatId" placeholder="CHAT_ID (contoh: -123456789)">
+        </div>
+        <div>
+          <label>Bulan</label>
+          <input id="month" placeholder="Bulan (contoh: November)">
+        </div>
+      </div>
+    </header>
+
+    <section class="controls">
+      <button id="addRowBtn">Tambah Baris</button>
+      <button id="clearBtn">Kosongkan Semua</button>
+      <button id="sendBtn" class="primary">Kirim ke Telegram</button>
+    </section>
+
+    <section class="table-wrapper">
+      <table id="reportTable" class="report">
+        <thead>
+          <tr>
+            <th>NO</th>
+            <th>Hari / Tanggal</th>
+            <th>COIN</th>
+            <th>Risk:Reward</th>
+            <th>Win & Loss</th>
+            <th>Alasan Win/Loss</th>
+            <th>MM</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <!-- baris akan dirender di sini -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes">
+      <h3>Preview Pesan</h3>
+      <pre id="preview">(Belum ada data — tekan Tambah Baris untuk memulai)</pre>
+    </section>
+
+    <footer>
+      <small>Template: kosong secara default — isi data lalu kirim ke Telegram.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

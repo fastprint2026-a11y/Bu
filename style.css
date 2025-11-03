@@ -1,0 +1,132 @@
+:root{
+  --paper-bg:#fbfbf7;
+  --ink:#111;
+  --accent:#0b6;
+  --muted:#666;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#eef3f8,#fff);
+  color:var(--ink);
+  padding:24px;
+  display:flex;
+  justify-content:center;
+}
+
+.sheet{
+  width:960px;
+  background:var(--paper-bg);
+  padding:20px 28px;
+  box-shadow:0 8px 30px rgba(20,30,50,0.08);
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,0.04);
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+header h1{
+  font-size:18px;
+  margin:0;
+  letter-spacing:1px;
+}
+
+.meta{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.meta label{
+  display:block;
+  font-size:11px;
+  color:var(--muted);
+}
+
+.meta input{
+  width:220px;
+  padding:6px 8px;
+  border:1px dashed rgba(0,0,0,0.12);
+  border-radius:4px;
+  background:transparent;
+  font-size:13px;
+}
+
+.controls{
+  margin-top:16px;
+  display:flex;
+  gap:8px;
+}
+
+button{
+  padding:8px 12px;
+  border-radius:6px;
+  border:1px solid rgba(0,0,0,0.08);
+  background:white;
+  cursor:pointer;
+}
+
+button.primary{
+  background:linear-gradient(90deg,#00b894,#006f5b);
+  color:white;
+  border:0;
+}
+
+.table-wrapper{
+  margin-top:12px;
+  overflow:auto;
+  border:2px solid rgba(0,0,0,0.04);
+  border-radius:6px;
+  background:rgba(255,255,255,0.7);
+}
+
+.report{
+  width:100%;
+  border-collapse:collapse;
+  min-width:920px;
+  font-size:14px;
+}
+
+.report th, .report td{
+  border:1px solid rgba(0,0,0,0.06);
+  padding:10px;
+  vertical-align:top;
+}
+
+.report thead th{
+  background:rgba(0,0,0,0.03);
+  font-weight:600;
+  text-align:left;
+}
+
+.report td input, .report td textarea{
+  width:100%;
+  border:0;
+  resize:vertical;
+  background:transparent;
+  font-size:13px;
+  padding:4px 2px;
+}
+
+.report td textarea{ min-height:44px; }
+
+.notes{
+  margin-top:16px;
+}
+
+#preview{
+  background:#f8f8fa;
+  border:1px dashed rgba(0,0,0,0.06);
+  padding:12px;
+  border-radius:6px;
+  white-space:pre-wrap;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+}
+footer{ margin-top:10px; color:var(--muted); font-size:12px }
